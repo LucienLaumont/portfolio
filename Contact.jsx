@@ -40,7 +40,7 @@ const Contact = () => {
             <div style={{fontSize:13, opacity:0.6, marginTop:14}}>Réponse sous 24h.</div>
           </a>
 
-          <a href="https://linkedin.com/in/lucien-laumont" target="_blank" rel="noreferrer" className="golden-shadow-md" style={{
+          <a href="https://linkedin.com/lucien-laumont" target="_blank" rel="noreferrer" className="golden-shadow-md" style={{
             background:'var(--fg-1)',
             color:'var(--bg-1)',
             padding:32,
