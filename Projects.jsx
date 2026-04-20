@@ -24,6 +24,17 @@ const PROJECTS = [
     note:'Pipeline complet : génération du dataset synthétique, fine-tuning supervisé, déploiement web.',
   },
   {
+    id:'mind7',
+    title:'Chatbot GreenIT & résumé d\'entretiens',
+    blurb:"Participation à des projets IA chez Mind7 Consulting : chatbot GreenIT et outil de résumé d'entretiens basé sur Speech-to-Text et LLM.",
+    role:'Consultant IA · Stage de 4 mois',
+    year:'Mai — Août 2024',
+    period:'2024',
+    tags:['Microsoft Azure','API OpenAI','Gradio'],
+    kind:'pro',
+    note:'Double mission — transformation digitale et POC IA en contexte conseil.',
+  },
+  {
     id:'accidents',
     title:'Prédiction de la gravité des accidents',
     blurb:"Pipeline de classification supervisée avec feature engineering avancé (météo, équipements, âge) pour maximiser l'AUC.",
@@ -45,17 +56,6 @@ const PROJECTS = [
     tags:['Python','Scrapy','Dash','Plotly','Docker'],
     kind:'academique',
     note:'Déploiement reproductible en Docker, pipeline end-to-end scrape → dashboard.',
-  },
-  {
-    id:'mind7',
-    title:'Chatbot GreenIT & résumé d\'entretiens',
-    blurb:"Participation à des projets IA chez Mind7 Consulting : chatbot GreenIT et outil de résumé d'entretiens basé sur Speech-to-Text et LLM.",
-    role:'Consultant IA · Stage de 4 mois',
-    year:'Mai — Août 2024',
-    period:'2024',
-    tags:['Microsoft Azure','API OpenAI','Gradio'],
-    kind:'pro',
-    note:'Double mission — transformation digitale et POC IA en contexte conseil.',
   },
 ];
 
