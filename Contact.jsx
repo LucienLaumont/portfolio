@@ -41,8 +41,8 @@ const Contact = () => {
           </a>
 
           <a href="https://linkedin.com/in/lucien-laumont" target="_blank" rel="noreferrer" className="golden-shadow-md" style={{
-            background:'#1f1f1f',
-            color:'#fffaeb',
+            background:'var(--fg-1)',
+            color:'var(--bg-1)',
             padding:32,
             display:'block',
             transition:'transform 220ms cubic-bezier(.2,.8,.2,1)',
@@ -52,7 +52,7 @@ const Contact = () => {
           >
             <div style={{display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:20}}>
               <img src="assets/linkedin-logo.png" alt="LinkedIn" style={{width:28, height:28, display:'block'}}/>
-              <Icon name="arrow-up-right" size={18} style={{color:'#fffaeb'}}/>
+              <Icon name="arrow-up-right" size={18} style={{color:'var(--bg-1)'}}/>
             </div>
             <div className="upper" style={{opacity:0.6, marginBottom:6}}>LinkedIn</div>
             <div style={{fontSize:22, letterSpacing:'-0.3px'}}>/in/lucien-laumont</div>
