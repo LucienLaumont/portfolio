@@ -72,6 +72,7 @@ const ProjectRow = ({ p, last }) => {
   const [hover, setHover] = React.useState(false);
   return (
     <div
+      className="project-row"
       onMouseEnter={()=>setHover(true)}
       onMouseLeave={()=>setHover(false)}
       style={{
@@ -90,7 +91,7 @@ const ProjectRow = ({ p, last }) => {
         transform: hover ? 'scale(1.2)' : 'scale(1)',
         transition:'transform 200ms ease-out',
       }}/>
-      <div style={{display:'grid', gridTemplateColumns:'1fr 160px', gap:24, alignItems:'baseline'}}>
+      <div className="row-stack-mobile" style={{display:'grid', gridTemplateColumns:'1fr 160px', gap:24, alignItems:'baseline'}}>
         <div>
           <div style={{display:'flex', gap:10, alignItems:'center', marginBottom:10, flexWrap:'wrap'}}>
             <span style={{
@@ -111,7 +112,7 @@ const ProjectRow = ({ p, last }) => {
             {p.tags.map(t => <Chip key={t} variant="outline">{t}</Chip>)}
           </div>
         </div>
-        <div className="upper" style={{opacity:0.65, textAlign:'right', whiteSpace:'normal'}}>{p.year}</div>
+        <div className="upper row-right" style={{opacity:0.65, textAlign:'right', whiteSpace:'normal'}}>{p.year}</div>
       </div>
     </div>
   );

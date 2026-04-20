@@ -37,7 +37,7 @@ const Formation = () => {
 
       <div style={{display:'flex', flexDirection:'column', gap:0}}>
         {FORMATIONS.map((f, i) => (
-          <div key={f.school} style={{
+          <div key={f.school} className="formation-row" style={{
             padding:'40px 0',
             borderTop:'1px solid var(--border-warm)',
             borderBottom: i === FORMATIONS.length-1 ? '1px solid var(--border-warm)' : 'none',
@@ -61,7 +61,7 @@ const Formation = () => {
                 <div style={{fontSize:14, opacity:0.6}}>Préparation aux concours des écoles d'ingénieurs.</div>
               )}
             </div>
-            <div style={{textAlign:'right'}}>
+            <div className="row-right" style={{textAlign:'right'}}>
               <div className="upper" style={{opacity:0.65, marginBottom:4}}>{f.when}</div>
               <div style={{fontSize:13, opacity:0.55}}>{f.where}</div>
             </div>

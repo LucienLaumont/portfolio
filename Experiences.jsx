@@ -32,14 +32,14 @@ const EXPERIENCES = [
 ];
 
 const ExperienceCard = ({ e, last }) => (
-  <div style={{
+  <div className="experience-row" style={{
     position:'relative',
     paddingLeft:48,
     paddingBottom: last ? 0 : 56,
     paddingTop:4,
   }}>
     <span className="timeline-dot" style={{borderColor:'#fa520f'}}/>
-    <div style={{display:'grid', gridTemplateColumns:'1fr 180px', gap:32, alignItems:'start'}}>
+    <div className="row-stack-mobile" style={{display:'grid', gridTemplateColumns:'1fr 180px', gap:32, alignItems:'start'}}>
       <div>
         <div style={{display:'flex', alignItems:'center', gap:16, marginBottom:12, flexWrap:'wrap'}}>
           {e.logo && (
@@ -76,7 +76,7 @@ const ExperienceCard = ({ e, last }) => (
           {e.stack.map(t => <Chip key={t} variant="outline">{t}</Chip>)}
         </div>
       </div>
-      <div className="upper" style={{opacity:0.65, textAlign:'right', fontSize:13}}>{e.when}</div>
+      <div className="upper row-right" style={{opacity:0.65, textAlign:'right', fontSize:13}}>{e.when}</div>
     </div>
   </div>
 );

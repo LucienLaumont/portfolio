@@ -40,9 +40,9 @@ const Nav = ({ route, go }) => {
         display:'flex', alignItems:'center', justifyContent:'space-between',
         padding:'16px 48px',
       }}>
-        <a onClick={() => go('home')} style={{display:'flex',alignItems:'center',gap:12,cursor:'pointer'}}>
+        <a onClick={() => go('home')} className="nav-brand" style={{display:'flex',alignItems:'center',gap:12,cursor:'pointer',minWidth:0}}>
           <LogoMark size={26}/>
-          <span style={{fontSize:16,letterSpacing:'-0.3px'}}>Lucien Laumont</span>
+          <span className="nav-brand-name" style={{fontSize:16,letterSpacing:'-0.3px'}}>Lucien Laumont</span>
         </a>
         <nav className="hide-mobile" style={{display:'flex',gap:28,alignItems:'center'}}>
           {link('home','Accueil')}
@@ -51,7 +51,7 @@ const Nav = ({ route, go }) => {
           {link('about','À propos')}
           {link('contact','Contact')}
         </nav>
-        <div style={{display:'flex', gap:10, alignItems:'center'}}>
+        <div className="nav-right" style={{display:'flex', gap:10, alignItems:'center'}}>
           <button
             onClick={() => setDark(d => !d)}
             aria-label={dark ? 'Passer en mode clair' : 'Passer en mode sombre'}
@@ -73,7 +73,10 @@ const Nav = ({ route, go }) => {
           <Button variant="ghost" iconLeft="download" href="assets/CV_LAUMONT_LUCIEN_FR_2026.pdf" target="_blank" style={{padding:'10px 14px', fontSize:13}}>
             <span className="hide-mobile">CV</span>
           </Button>
-          <Button variant="dark" upper onClick={() => go('contact')}>Me contacter</Button>
+          <Button variant="dark" upper onClick={() => go('contact')} style={{whiteSpace:'nowrap'}}>
+            <span className="hide-mobile">Me contacter</span>
+            <span style={{display:'none'}} className="show-mobile-inline">Contact</span>
+          </Button>
         </div>
       </div>
     </div>

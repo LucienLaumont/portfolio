@@ -199,3 +199,45 @@ body.theme-dark ::-webkit-scrollbar-thumb { background: rgba(255,200,120,0.15); 
   .hide-mobile { display: none !important; }
   .two-col { grid-template-columns: 1fr !important; }
 }
+
+@media (max-width: 640px) {
+  .show-mobile-inline { display: inline !important; }
+  /* Any content/meta grid collapses to a single column on phones */
+  .row-stack-mobile {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  .row-stack-mobile .row-right {
+    text-align: left !important;
+    order: -1;
+    font-size: 12px !important;
+  }
+
+  /* Tight up timeline rows so the text column gets back its horizontal space */
+  .project-row { padding-right: 0 !important; padding-left: 28px !important; }
+  .experience-row { padding-left: 28px !important; }
+
+  /* Formation card */
+  .formation-row {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    padding: 28px 0 !important;
+  }
+  .formation-row .row-right { text-align: left !important; }
+
+  /* Long chips must wrap instead of forcing horizontal scroll */
+  .row-stack-mobile span,
+  .experience-row span[style*="9999"],
+  .project-row span[style*="9999"] {
+    white-space: normal !important;
+  }
+
+  /* Nav: allow breathing room */
+  .nav-right { gap: 6px !important; }
+  .nav-brand { max-width: 60%; overflow: hidden; }
+  .nav-brand-name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}

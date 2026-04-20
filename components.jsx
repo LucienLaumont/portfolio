@@ -29,7 +29,6 @@ const Chip = ({ children, variant = 'cream' }) => {
       fontSize:11,
       letterSpacing:'0.06em',
       textTransform:'uppercase',
-      whiteSpace:'nowrap',
       display:'inline-block',
     }}>{children}</span>
   );
