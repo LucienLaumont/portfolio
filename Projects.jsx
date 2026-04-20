@@ -4,7 +4,7 @@ const PROJECTS = [
   {
     id:'ymg',
     title:'RAG & Back-office IA',
-    blurb:"Stage de fin d'études chez Your Main Guy (Vancouver).",
+    blurb:"Stage de fin d'études chez Your Main Guy (Vancouver). Conception d'une chaîne RAG complète (embeddings, LLM Mistral, vector DB Pinecone) et développement full-stack d'un back-office sécurisé avec OAuth Google.",
     role:'AI Intern · cursus ingénieur',
     year:'Mars — Août 2025',
     period:'2025',
