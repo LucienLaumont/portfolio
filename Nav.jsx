@@ -75,7 +75,6 @@ const Nav = ({ route, go }) => {
           </Button>
           <Button variant="dark" upper onClick={() => go('contact')} style={{whiteSpace:'nowrap'}}>
             <span className="hide-mobile">Me contacter</span>
-            <span style={{display:'none'}} className="show-mobile-inline">Contact</span>
           </Button>
         </div>
       </div>

@@ -201,7 +201,6 @@ body.theme-dark ::-webkit-scrollbar-thumb { background: rgba(255,200,120,0.15); 
 }
 
 @media (max-width: 640px) {
-  .show-mobile-inline { display: inline !important; }
   /* Any content/meta grid collapses to a single column on phones */
   .row-stack-mobile {
     grid-template-columns: 1fr !important;
@@ -232,12 +231,9 @@ body.theme-dark ::-webkit-scrollbar-thumb { background: rgba(255,200,120,0.15); 
     white-space: normal !important;
   }
 
-  /* Nav: allow breathing room */
+  /* Nav: tighter side padding + hide the "Me contacter" CTA to leave room for the full name */
+  .container { padding: 0 16px !important; }
   .nav-right { gap: 6px !important; }
-  .nav-brand { max-width: 60%; overflow: hidden; }
-  .nav-brand-name {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
+  .nav-right .btn.dark { display: none !important; }
+  .nav-brand-name { white-space: nowrap; }
 }
