@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <section id="contact" style={{background:'var(--bg-2)'}}>
       <div className="container" style={{paddingTop:96, paddingBottom:120}}>
-        <Marker>Contact · disponible dès juillet 2025</Marker>
+        <Marker>Contact · disponible dès juillet 2026</Marker>
         <h2 style={{
           fontSize:'clamp(40px, 6vw, 82px)',
           lineHeight:1, letterSpacing:'-2px', fontWeight:400,
@@ -18,7 +18,7 @@ const Contact = () => {
           }}>Data Science & IA ?</span>
         </h2>
         <p style={{fontSize:18, lineHeight:1.6, maxWidth:560, opacity:0.8, marginBottom:48}}>
-          Je suis à l'écoute d'opportunités en CDI à partir de juillet 2025 — en France ou à l'international. N'hésitez pas à me contacter par email ou via LinkedIn.
+          Je suis à l'écoute d'opportunités en CDI/CDD à partir de juillet 2026 — en France. N'hésitez pas à me contacter par email ou via LinkedIn.
         </p>
 
         <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:24, maxWidth:900}} className="two-col">
@@ -66,7 +66,7 @@ const Contact = () => {
         }}>
           {[
             { k:'Localisation', v:'77500 Chelles, France' },
-            { k:'Mobilité', v:'France · International' },
+            { k:'Mobilité', v:'France' },
             { k:'GitHub', v:'github.com/LucienLaumont', href:'https://github.com/LucienLaumont' },
             { k:'CV', v:'Télécharger le PDF', href:'assets/CV_LAUMONT_LUCIEN_FR_2026.pdf' },
           ].map(row => (
