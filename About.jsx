@@ -17,7 +17,7 @@ const About = ({ go }) => {
             Diplômé de l'ESIEE Paris en Data Science & IA, j'ai passé cinq ans entre mathématiques, ingénierie logicielle et apprentissage automatique. Mon stage de fin d'études à Vancouver m'a appris à livrer des systèmes IA complets — de la chaîne RAG au back-office sécurisé — et à travailler dans un environnement anglophone.
           </p>
           <p style={{fontSize:17, lineHeight:1.65, marginTop:18, maxWidth:580, opacity:0.85}}>
-            Je cherche un poste en Data Science ou IA à partir de juillet 2025, avec une préférence pour des sujets à impact — énergie, environnement, éducation. En parallèle je développe CPES Platform, un réseau d'anciens élèves pour ma prépa d'origine.
+            Je cherche un poste en Data Science ou IA à partir de juillet 2026, avec une préférence pour des sujets à impact — énergie, environnement, éducation. En parallèle je développe CPES Platform, un réseau d'anciens élèves pour ma prépa d'origine.
           </p>
 
           <div style={{display:'flex', gap:12, marginTop:40, flexWrap:'wrap'}}>
