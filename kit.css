@@ -236,4 +236,7 @@ body.theme-dark ::-webkit-scrollbar-thumb { background: rgba(255,200,120,0.15); 
   .nav-right { gap: 6px !important; }
   .nav-right .btn.dark { display: none !important; }
   .nav-brand-name { white-space: nowrap; }
+
+  /* Guarantee a visible gap between every section, even on phones */
+  main > section + section { margin-top: 48px; }
 }
