@@ -40,7 +40,7 @@ const Contact = () => {
             <div style={{fontSize:13, opacity:0.6, marginTop:14}}>Réponse sous 24h.</div>
           </a>
 
-          <a href="https://linkedin.com/lucien-laumont" target="_blank" rel="noreferrer" className="golden-shadow-md" style={{
+          <a href="https://linkedin.com/lucienlaumont" target="_blank" rel="noreferrer" className="golden-shadow-md" style={{
             background:'var(--fg-1)',
             color:'var(--bg-1)',
             padding:32,
@@ -55,7 +55,7 @@ const Contact = () => {
               <Icon name="arrow-up-right" size={18} style={{color:'var(--bg-1)'}}/>
             </div>
             <div className="upper" style={{opacity:0.6, marginBottom:6}}>LinkedIn</div>
-            <div style={{fontSize:22, letterSpacing:'-0.3px'}}>/in/lucien-laumont</div>
+            <div style={{fontSize:22, letterSpacing:'-0.3px'}}>/lucien-laumont</div>
             <div style={{fontSize:13, opacity:0.6, marginTop:14}}>Connectons-nous.</div>
           </a>
         </div>
