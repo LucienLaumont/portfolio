@@ -36,8 +36,8 @@ const PROJECTS = [
   },
   {
     id:'accidents',
-    title:'Prédiction de la gravité des accidents',
-    blurb:"Pipeline de classification supervisée avec feature engineering avancé (météo, équipements, âge) pour maximiser l'AUC.",
+    title:'Prédiction de la gravité des accidents de la route',
+    blurb:"Développement d'une pipeline de classification supervisée avec feature engineering avancé (météo, équipements, âge) pour maximiser l'AUC. Ce projet, réalisé au format compétition Kaggle, m'a permis de me classer 1er sur 57 étudiants de la promotion Data Science & IA 2024.",
     role:'Travail académique — ESIEE Paris',
     year:'Janvier — Février 2024',
     period:'2024',
