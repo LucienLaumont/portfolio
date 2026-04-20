@@ -51,7 +51,7 @@ const Contact = () => {
           onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
           >
             <div style={{display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:20}}>
-              <Icon name="linkedin" size={24} style={{color:'#ffa110'}}/>
+              <img src="assets/linkedin-logo.png" alt="LinkedIn" style={{width:28, height:28, display:'block'}}/>
               <Icon name="arrow-up-right" size={18} style={{color:'#fffaeb'}}/>
             </div>
             <div className="upper" style={{opacity:0.6, marginBottom:6}}>LinkedIn</div>
