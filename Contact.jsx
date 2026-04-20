@@ -55,7 +55,7 @@ const Contact = () => {
               <Icon name="arrow-up-right" size={18} style={{color:'var(--bg-1)'}}/>
             </div>
             <div className="upper" style={{opacity:0.6, marginBottom:6}}>LinkedIn</div>
-            <div style={{fontSize:22, letterSpacing:'-0.3px'}}>/lucien-laumont</div>
+            <div style={{fontSize:22, letterSpacing:'-0.3px'}}>/lucienlaumont</div>
             <div style={{fontSize:13, opacity:0.6, marginTop:14}}>Connectons-nous.</div>
           </a>
         </div>
