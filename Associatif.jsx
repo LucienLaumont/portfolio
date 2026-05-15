@@ -16,8 +16,11 @@ const ASSOC = [
     where:'Projet personnel · Sensibilisation & IA pour le vivant',
     when:'Mai 2026 — En cours',
     note:"Plateforme conversationnelle qui rend accessibles des millions d'observations de cétacés (~90 espèces) — un projet qui me tient à cœur : montrer concrètement que l'IA peut servir la sensibilisation et la connaissance du vivant.",
+    partnersLabel:'Projet & sources',
     partners:[
       { name:'Cetascope', logo:'assets/cetascope.png' },
+      { name:'OBIS', logo:'assets/OBIS.png' },
+      { name:'UICN', logo:'assets/UICN.png' },
     ],
   },
 ];
@@ -51,7 +54,7 @@ const Associatif = () => {
                 marginTop:20, paddingTop:20,
                 borderTop:'1px solid var(--border-warm)',
               }}>
-                <div className="upper" style={{opacity:0.55, fontSize:11}}>Partenaires</div>
+                <div className="upper" style={{opacity:0.55, fontSize:11}}>{a.partnersLabel || 'Partenaires'}</div>
                 <div style={{display:'flex', gap:12, alignItems:'center'}}>
                   {a.partners.map(p => (
                     <img key={p.name} src={p.logo} alt={p.name}
