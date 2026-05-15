@@ -4,7 +4,7 @@ const PROJECTS = [
   {
     id:'cetascope',
     title:'Cetascope — Exploration conversationnelle des cétacés',
-    blurb:"Plateforme full-stack permettant d'explorer des millions d'observations de cétacés (~90 espèces) via un chatbot en langage naturel. Le LLM Gemini 3.1 Flash interprète la requête et déclenche cartes, séries temporelles, classements ou fiches espèces.",
+    blurb:"Plateforme **full-stack** permettant d'explorer des millions d'observations de cétacés (**~90 espèces**) via un **chatbot en langage naturel**. Le LLM **Gemini 3.1 Flash** interprète la requête et déclenche cartes, séries temporelles, classements ou fiches espèces.",
     role:'Projet personnel',
     year:'Mai 2026',
     period:'2026',
@@ -16,7 +16,7 @@ const PROJECTS = [
   {
     id:'france-travail',
     title:'France Travail — SDK Python & Dashboard Data/IA',
-    blurb:"Écosystème en deux briques : un SDK Python (france-travail-job-offers) qui encapsule l'API France Travail avec OAuth2 automatique, rate-limiting et référentiel NAF/ROME ; et un dashboard public qui suit quotidiennement les offres Data/IA en France, avec classification du niveau d'expérience (junior / mid / senior) par Claude Haiku.",
+    blurb:"Écosystème en deux briques : un **SDK Python** (france-travail-job-offers) qui encapsule l'API France Travail avec **OAuth2** automatique, rate-limiting et référentiel **NAF/ROME** ; et un **dashboard public** qui suit quotidiennement les offres Data/IA en France, avec **classification du niveau d'expérience** (junior / mid / senior) par **Claude Haiku**.",
     role:'Projet personnel',
     year:'Avril 2026',
     period:'2026',
@@ -28,7 +28,7 @@ const PROJECTS = [
   {
     id:'ymg',
     title:'RAG & Back-office IA',
-    blurb:"Stage de fin d'études chez Your Main Guy (Vancouver). Conception d'une chaîne RAG complète (embeddings, LLM Mistral, vector DB Pinecone) et développement full-stack d'un back-office sécurisé avec OAuth Google.",
+    blurb:"Stage de fin d'études chez **Your Main Guy (Vancouver)**. Conception d'une **chaîne RAG complète** (embeddings, LLM Mistral, vector DB Pinecone) et développement **full-stack** d'un back-office sécurisé avec **OAuth Google**.",
     role:'AI Intern · Stage de 6 mois',
     year:'Mars — Août 2025',
     period:'2025',
@@ -39,7 +39,7 @@ const PROJECTS = [
   {
     id:'gpt2',
     title:'Fine-tuning GPT-2',
-    blurb:"Fine-tuning d'un GPT-2 sur un dataset synthétique généré par Mistral, avec interface Next.js pour chatbot interactif.",
+    blurb:"**Fine-tuning d'un GPT-2** sur un **dataset synthétique** généré par Mistral, avec interface Next.js pour chatbot interactif.",
     role:'Travail académique — ESIEE Paris',
     year:'Janvier — Mars 2025',
     period:'2025',
@@ -50,7 +50,7 @@ const PROJECTS = [
   {
     id:'mind7',
     title:'Chatbot GreenIT & résumé d\'entretiens',
-    blurb:"Participation à des projets IA chez Mind7 Consulting : chatbot GreenIT et outil de résumé d'entretiens basé sur Speech-to-Text et LLM.",
+    blurb:"Participation à des projets IA chez **Mind7 Consulting** : **chatbot GreenIT** et outil de **résumé d'entretiens** basé sur Speech-to-Text et LLM.",
     role:'Consultant Processus & Transformation Digitale · Stage de 4 mois',
     year:'Mai — Août 2024',
     period:'2024',
@@ -61,7 +61,7 @@ const PROJECTS = [
   {
     id:'accidents',
     title:'Prédiction de la gravité des accidents de la route',
-    blurb:"Développement d'une pipeline de classification supervisée avec feature engineering avancé (météo, équipements, âge) pour maximiser l'AUC. Ce projet, réalisé au format compétition Kaggle, m'a permis de me classer 1er sur 57 étudiants de la promotion Data Science & IA 2024.",
+    blurb:"Développement d'une **pipeline de classification supervisée** avec feature engineering avancé (météo, équipements, âge) pour maximiser l'AUC. Ce projet, réalisé au format **compétition Kaggle**, m'a permis de me classer **1er sur 57 étudiants** de la promotion Data Science & IA 2024.",
     role:'Travail académique — ESIEE Paris',
     year:'Janvier — Février 2024',
     period:'2024',
@@ -73,7 +73,7 @@ const PROJECTS = [
   {
     id:'dashboard',
     title:"Dashboard — Site de L'Étudiant",
-    blurb:"Extraction de données sur les lycées français via scraping (Scrapy), développement d'un tableau de bord interactif conteneurisé avec Docker.",
+    blurb:"**Extraction de données** sur les lycées français via **scraping (Scrapy)**, développement d'un **tableau de bord interactif** conteneurisé avec **Docker**.",
     role:'Travail académique — ESIEE Paris',
     year:'Décembre 2023 — Janvier 2024',
     period:'2024',
@@ -92,6 +92,20 @@ const kindColor = {
   pro: '#fa520f',
   academique: '#ff8105',
   perso: '#ffb100',
+};
+
+const renderEmphasis = (text) => {
+  const parts = String(text).split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((seg, i) => {
+    if (seg.startsWith('**') && seg.endsWith('**')) {
+      return (
+        <strong key={i} style={{fontWeight:500, opacity:1, color:'#1f1f1f'}}>
+          {seg.slice(2, -2)}
+        </strong>
+      );
+    }
+    return seg;
+  });
 };
 
 const ProjectRow = ({ p, last }) => {
@@ -132,7 +146,7 @@ const ProjectRow = ({ p, last }) => {
             )}
           </div>
           <div style={{fontSize:28, lineHeight:1.15, letterSpacing:'-0.5px', marginBottom:8}}>{p.title}</div>
-          <div style={{fontSize:15, lineHeight:1.55, opacity:0.78, maxWidth:640, marginBottom:12}}>{p.blurb}</div>
+          <div style={{fontSize:15, lineHeight:1.55, opacity:0.78, maxWidth:640, marginBottom:12}}>{renderEmphasis(p.blurb)}</div>
           <div style={{fontSize:13, opacity:0.6, marginBottom:14, fontStyle:'italic'}}>{p.role}</div>
           <div style={{display:'flex', gap:6, flexWrap:'wrap'}}>
             {p.tags.map(t => <Chip key={t} variant="outline">{t}</Chip>)}

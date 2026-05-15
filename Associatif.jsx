@@ -12,10 +12,10 @@ const ASSOC = [
     ],
   },
   {
-    title:'CPES Platform',
-    where:'Alumni CPGE Lycée Jean Moulin · Torcy',
-    when:'Août 2025 — En cours',
-    note:"Initiateur et développeur d'une plateforme web pour les alumni de la classe préparatoire Jean Moulin (Next.js · Supabase · ShadCN/UI).",
+    title:'Cetascope',
+    where:'Projet personnel · Sensibilisation & IA pour le vivant',
+    when:'Mai 2026 — En cours',
+    note:"Plateforme conversationnelle qui rend accessibles des millions d'observations de cétacés (~90 espèces) — un projet qui me tient à cœur : montrer concrètement que l'IA peut servir la sensibilisation et la connaissance du vivant.",
   },
 ];
 
