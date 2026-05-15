@@ -2,6 +2,28 @@
 
 const PROJECTS = [
   {
+    id:'cetascope',
+    title:'Cetascope — Exploration conversationnelle des cétacés',
+    blurb:"Plateforme full-stack permettant d'explorer des millions d'observations de cétacés (~90 espèces) via un chatbot en langage naturel. Le LLM Gemini 2.0 Flash interprète la requête et déclenche cartes, choropleth, séries temporelles, classements ou fiches espèces.",
+    role:'Projet personnel',
+    year:'Mai 2026',
+    period:'2026',
+    tags:['React','FastAPI','PostGIS','Supabase','Gemini 3.1 Flash','D3.js','HuggingFace Spaces'],
+    kind:'perso',
+    note:"Sources OBIS / GBIF / WoRMS / IUCN, synchronisation automatique via GitHub Actions, backend FastAPI + asyncpg déployé sur HuggingFace Spaces, frontend React/D3 sur GitHub Pages.",
+  },
+  {
+    id:'france-travail',
+    title:'France Travail — SDK Python & Dashboard Data/IA',
+    blurb:"Écosystème en deux briques : un SDK Python (france-travail-job-offers) qui encapsule l'API France Travail avec OAuth2 automatique, rate-limiting et référentiel NAF/ROME ; et un dashboard public qui suit quotidiennement les offres Data/IA en France.",
+    role:'Projet personnel',
+    year:'Avril 2026',
+    period:'2026',
+    tags:['Python','Pydantic','Supabase','GitHub Actions','Chart.js','GitHub Pages'],
+    kind:'perso',
+    note:"Collecte automatisée par cron GitHub Actions (quotidien, 18h), stockage Supabase avec dédoublonnage par ID, annualisation des salaires, dashboard statique JS vanilla + Chart.js déployé sur GitHub Pages.",
+  },
+  {
     id:'ymg',
     title:'RAG & Back-office IA',
     blurb:"Stage de fin d'études chez Your Main Guy (Vancouver). Conception d'une chaîne RAG complète (embeddings, LLM Mistral, vector DB Pinecone) et développement full-stack d'un back-office sécurisé avec OAuth Google.",
@@ -62,10 +84,12 @@ const PROJECTS = [
 const kindLabel = {
   pro: 'Professionnel',
   academique: 'Académique',
+  perso: 'Personnel',
 };
 const kindColor = {
   pro: '#fa520f',
   academique: '#ff8105',
+  perso: '#ffb100',
 };
 
 const ProjectRow = ({ p, last }) => {
@@ -123,7 +147,7 @@ const Projects = ({ full = false }) => {
   return (
     <section className="container section" style={{paddingTop:96, paddingBottom:96}}>
       <div style={{display:'flex', justifyContent:'space-between', alignItems:'baseline', marginBottom:24}}>
-        <Marker>Projets · 2023 — 2025</Marker>
+        <Marker>Projets · 2023 — 2026</Marker>
         <span className="upper" style={{opacity:0.55}}>{PROJECTS.length} projets</span>
       </div>
       <h2 style={{
@@ -138,7 +162,7 @@ const Projects = ({ full = false }) => {
         De la donnée brute<br/>au produit livré.
       </h2>
       <p style={{maxWidth:640, opacity:0.75, fontSize:16, lineHeight:1.55, marginBottom:56}}>
-        Cinq projets pro et académiques — chacun pensé pour résoudre un problème concret avec les bons outils : scraping, NLP, RAG, classification supervisée, full-stack.
+        Sept projets pro, perso et académiques — chacun pensé pour résoudre un problème concret avec les bons outils : scraping, NLP, RAG, classification supervisée, full-stack, SDK et data engineering.
       </p>
 
       <div style={{
