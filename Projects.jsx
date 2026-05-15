@@ -4,7 +4,7 @@ const PROJECTS = [
   {
     id:'cetascope',
     title:'Cetascope — Exploration conversationnelle des cétacés',
-    blurb:"Plateforme full-stack permettant d'explorer des millions d'observations de cétacés (~90 espèces) via un chatbot en langage naturel. Le LLM Gemini 2.0 Flash interprète la requête et déclenche cartes, choropleth, séries temporelles, classements ou fiches espèces.",
+    blurb:"Plateforme full-stack permettant d'explorer des millions d'observations de cétacés (~90 espèces) via un chatbot en langage naturel. Le LLM Gemini 3.1 Flash interprète la requête et déclenche cartes, séries temporelles, classements ou fiches espèces.",
     role:'Projet personnel',
     year:'Mai 2026',
     period:'2026',
@@ -16,13 +16,13 @@ const PROJECTS = [
   {
     id:'france-travail',
     title:'France Travail — SDK Python & Dashboard Data/IA',
-    blurb:"Écosystème en deux briques : un SDK Python (france-travail-job-offers) qui encapsule l'API France Travail avec OAuth2 automatique, rate-limiting et référentiel NAF/ROME ; et un dashboard public qui suit quotidiennement les offres Data/IA en France.",
+    blurb:"Écosystème en deux briques : un SDK Python (france-travail-job-offers) qui encapsule l'API France Travail avec OAuth2 automatique, rate-limiting et référentiel NAF/ROME ; et un dashboard public qui suit quotidiennement les offres Data/IA en France, avec classification du niveau d'expérience (junior / mid / senior) par Claude Haiku.",
     role:'Projet personnel',
     year:'Avril 2026',
     period:'2026',
-    tags:['Python','Pydantic','Supabase','GitHub Actions','Chart.js','GitHub Pages'],
+    tags:['Python','Pydantic','Supabase','GitHub Actions','Claude Haiku','Chart.js','GitHub Pages'],
     kind:'perso',
-    note:"Collecte automatisée par cron GitHub Actions (quotidien, 18h), stockage Supabase avec dédoublonnage par ID, annualisation des salaires, dashboard statique JS vanilla + Chart.js déployé sur GitHub Pages.",
+    note:"Collecte automatisée par cron GitHub Actions (quotidien, 18h), enrichissement par Claude Haiku pour estimer le niveau d'expérience requis à partir du descriptif, stockage Supabase avec dédoublonnage par ID, annualisation des salaires, dashboard statique JS vanilla + Chart.js déployé sur GitHub Pages.",
     link:'https://lucienlaumont.github.io/france-travail-dashboard',
   },
   {
