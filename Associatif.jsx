@@ -16,6 +16,9 @@ const ASSOC = [
     where:'Projet personnel · Sensibilisation & IA pour le vivant',
     when:'Mai 2026 — En cours',
     note:"Plateforme conversationnelle qui rend accessibles des millions d'observations de cétacés (~90 espèces) — un projet qui me tient à cœur : montrer concrètement que l'IA peut servir la sensibilisation et la connaissance du vivant.",
+    partners:[
+      { name:'Cetascope', logo:'assets/cetascope.png' },
+    ],
   },
 ];
 

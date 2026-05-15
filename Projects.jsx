@@ -99,7 +99,7 @@ const renderEmphasis = (text) => {
   return parts.map((seg, i) => {
     if (seg.startsWith('**') && seg.endsWith('**')) {
       return (
-        <strong key={i} style={{fontWeight:500, opacity:1, color:'#1f1f1f'}}>
+        <strong key={i} style={{fontWeight:500, opacity:1, color:'var(--fg-1)'}}>
           {seg.slice(2, -2)}
         </strong>
       );
@@ -146,7 +146,7 @@ const ProjectRow = ({ p, last }) => {
             )}
           </div>
           <div style={{fontSize:28, lineHeight:1.15, letterSpacing:'-0.5px', marginBottom:8}}>{p.title}</div>
-          <div style={{fontSize:15, lineHeight:1.55, opacity:0.78, maxWidth:640, marginBottom:12}}>{renderEmphasis(p.blurb)}</div>
+          <div style={{fontSize:15, lineHeight:1.55, color:'var(--fg-2)', maxWidth:640, marginBottom:12}}>{renderEmphasis(p.blurb)}</div>
           <div style={{fontSize:13, opacity:0.6, marginBottom:14, fontStyle:'italic'}}>{p.role}</div>
           <div style={{display:'flex', gap:6, flexWrap:'wrap'}}>
             {p.tags.map(t => <Chip key={t} variant="outline">{t}</Chip>)}
