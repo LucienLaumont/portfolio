@@ -11,6 +11,7 @@ const PROJECTS = [
     tags:['React','FastAPI','PostGIS','Supabase','Gemini 3.1 Flash','D3.js','HuggingFace Spaces'],
     kind:'perso',
     note:"Sources OBIS / GBIF / WoRMS / IUCN, synchronisation automatique via GitHub Actions, backend FastAPI + asyncpg déployé sur HuggingFace Spaces, frontend React/D3 sur GitHub Pages.",
+    link:'https://lucienlaumont.github.io/cetascope/',
   },
   {
     id:'france-travail',
@@ -22,6 +23,7 @@ const PROJECTS = [
     tags:['Python','Pydantic','Supabase','GitHub Actions','Chart.js','GitHub Pages'],
     kind:'perso',
     note:"Collecte automatisée par cron GitHub Actions (quotidien, 18h), stockage Supabase avec dédoublonnage par ID, annualisation des salaires, dashboard statique JS vanilla + Chart.js déployé sur GitHub Pages.",
+    link:'https://lucienlaumont.github.io/france-travail-dashboard',
   },
   {
     id:'ymg',
@@ -135,6 +137,21 @@ const ProjectRow = ({ p, last }) => {
           <div style={{display:'flex', gap:6, flexWrap:'wrap'}}>
             {p.tags.map(t => <Chip key={t} variant="outline">{t}</Chip>)}
           </div>
+          {p.link && (
+            <a
+              href={p.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display:'inline-flex', alignItems:'center', gap:6,
+                marginTop:14, fontSize:13, letterSpacing:'0.04em',
+                color: kindColor[p.kind], textDecoration:'none',
+                borderBottom:`1px solid ${kindColor[p.kind]}`, paddingBottom:2,
+              }}
+            >
+              Voir le projet ↗
+            </a>
+          )}
         </div>
         <div className="upper row-right" style={{opacity:0.65, textAlign:'right', whiteSpace:'normal'}}>{p.year}</div>
       </div>
