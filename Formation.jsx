@@ -3,7 +3,7 @@
 const FORMATIONS = [
   {
     school:'ESIEE Paris',
-    degree:"École d'ingénieurs — Université Gustave Eiffel",
+    degree:"École d'ingénieurs - Université Gustave Eiffel",
     filiere:'Filière DataScience & IA',
     when:'Septembre 2022 — Août 2025',
     where:'Noisy-le-Grand, France',
@@ -13,7 +13,7 @@ const FORMATIONS = [
     ],
   },
   {
-    school:'Classe Préparatoire — Lycée Jean Moulin',
+    school:'Classe Préparatoire - Lycée Jean Moulin',
     degree:'CPGE Mathématiques, Physique et Informatique',
     filiere:'Classe Préparatoire aux Enseignements Scientifiques',
     when:'Septembre 2020 — Juin 2022',

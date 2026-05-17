@@ -95,7 +95,7 @@ const Experiences = () => {
           margin:'20px 0 56px',
           maxWidth:900,
         }}>
-          Deux stages,<br/>deux continents.
+          De Paris,<br/>à Vancouver.
         </h2>
         <div className="timeline-rail">
           {EXPERIENCES.map((e, i) => (

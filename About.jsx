@@ -11,13 +11,13 @@ const About = ({ go }) => {
             fontSize:'clamp(40px, 5.2vw, 72px)', lineHeight:1,
             letterSpacing:'-1.8px', fontWeight:400, margin:0, textWrap:'pretty',
           }}>
-            Ingénieur, curieux, indépendant — <span style={{color:'#fa520f'}}>et encore étudiant du monde.</span>
+            Ingénieur, curieux, indépendant - <span style={{color:'#fa520f'}}>et attentif à un usage responsable de l'IA.</span>
           </h1>
           <p style={{fontSize:17, lineHeight:1.65, marginTop:32, maxWidth:580, opacity:0.85}}>
-            Diplômé de l'ESIEE Paris en Data Science & IA, j'ai passé cinq ans entre mathématiques, ingénierie logicielle et apprentissage automatique. Mon stage de fin d'études à Vancouver m'a appris à livrer des systèmes IA complets — de la chaîne RAG au back-office sécurisé — et à travailler dans un environnement anglophone.
+            Diplômé de l'ESIEE Paris en Data Science & IA et après un stage de fin d'études à Vancouver qui m'a appris à livrer des systèmes IA complets (de la chaîne RAG au back-office sécurisé) et à travailler dans un environnement anglophone.
           </p>
           <p style={{fontSize:17, lineHeight:1.65, marginTop:18, maxWidth:580, opacity:0.85}}>
-            Je cherche un poste en Data Science ou IA à partir de juillet 2026, avec une préférence pour des sujets à impact — énergie, environnement, éducation. En parallèle je développe Cetascope, une plateforme conversationnelle qui rend accessibles les observations de cétacés — une manière concrète de montrer que l'IA peut aussi servir la sensibilisation au vivant.
+            Je cherche un poste en Data Science ou IA à partir de juillet 2026, avec une préférence pour des sujets à impact (énergie, environnement, éducation). En parallèle je développe Cetascope, une plateforme conversationnelle qui rend accessibles les observations de cétacés, une manière concrète de montrer que l'IA peut aussi servir la sensibilisation au vivant.
           </p>
 
           <div style={{display:'flex', gap:12, marginTop:40, flexWrap:'wrap'}}>

@@ -3,17 +3,17 @@
 const HARD_SKILLS = [
   {
     level:'Maîtrise avancée',
-    items:['Python','R','SQL','Supabase','FastAPI','Canva','Pinecone','Render','Pandas'],
+    items:['Python','R','Github','SQL','Supabase','FastAPI','Canva','Pinecone','Render','Pandas'],
   },
   {
     level:'Maîtrise intermédiaire',
-    items:['C','Next.js','Azure AI','Docker','Excel','Next-Auth','LangChain','PowerPoint'],
+    items:['Next.js','Claude Code','MCP','Azure AI','Docker','C','Excel','Next-Auth','LangChain','PowerPoint'],
   },
 ];
 
 const LANGUAGES = [
   { flag:'🇫🇷', lang:'Français', level:'Langue maternelle', dots:5 },
-  { flag:'🇬🇧', lang:'Anglais', level:'B2 — TOEIC 845 · stage de 5 mois au Canada', dots:4 },
+  { flag:'🇬🇧', lang:'Anglais', level:"B2 - TOEIC 845 · (suivi d'un stage de 5 mois au Canada - Vancouver)", dots:4 },
 ];
 
 const SOFT = ['Dynamique','Rigueur','Curieux','Sociable','Indépendant'];
