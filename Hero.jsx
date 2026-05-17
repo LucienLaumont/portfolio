@@ -34,7 +34,7 @@ const Hero = ({ go }) => {
           </p>
           <div style={{display:'flex', gap:12, marginTop:40, flexWrap:'wrap'}}>
             <Button variant="dark" upper icon="arrow-up-right" onClick={() => go('projects')}>Voir mes projets</Button>
-            <Button variant="cream" onClick={() => go('contact')}>Disponible dès juillet 2025 →</Button>
+            <Button variant="cream" onClick={() => go('contact')}>Disponible dès juillet 2026 →</Button>
           </div>
           <div style={{
             display:'flex', gap:28, marginTop:56, flexWrap:'wrap',
