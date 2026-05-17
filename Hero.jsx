@@ -30,7 +30,7 @@ const Hero = ({ go }) => {
           <p style={{
             fontSize:18, lineHeight:1.6, maxWidth:560, opacity:0.8, marginTop:8,
           }}>
-            Des solutions intelligentes au service de la planète. Diplômé ingénieur ESIEE Paris en Data Science & IA, je conçois et déploie des chaînes RAG, des modèles de classification et des outils full-stack qui transforment la donnée en décision.
+            Des solutions intelligentes au service de la planète. Diplômé ingénieur ESIEE Paris en Data Science & IA, j'ai travaillé sur des chaînes RAG, des modèles de classification et des outils full-stack qui transforment la donnée en décision.
           </p>
           <div style={{display:'flex', gap:12, marginTop:40, flexWrap:'wrap'}}>
             <Button variant="dark" upper icon="arrow-up-right" onClick={() => go('projects')}>Voir mes projets</Button>
