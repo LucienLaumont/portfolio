@@ -2,16 +2,16 @@
 
 const PROJECTS = [
   {
-    id:'cetascope',
-    title:'Cetascope - Exploration conversationnelle des cétacés',
-    blurb:"Plateforme **full-stack** permettant d'explorer des millions d'observations de cétacés (**~90 espèces**) via un **chatbot en langage naturel**. Le LLM **Gemini 3.1 Flash** interprète la requête et déclenche cartes, séries temporelles, classements ou fiches espèces.",
+    id:'melodle',
+    title:'Melodle - Jeu de reconnaissance musicale',
+    blurb:"Jeu façon **Heardle** où l'on devine un titre à partir d'un **extrait audio Deezer** qui s'allonge à chaque essai manqué. Modes **solo**, **défi quotidien** et **salons multijoueurs** en temps réel entre amis.",
     role:'Projet personnel',
-    year:'Mai 2026',
+    year:'Juillet 2026',
     period:'2026',
-    tags:['React','FastAPI','PostGIS','Supabase','Gemini 3.1 Flash','HuggingFace Spaces'],
+    tags:['React','TypeScript','Vite','Supabase','Realtime','Deezer API'],
     kind:'perso',
-    note:"Sources OBIS / GBIF / WoRMS / IUCN, synchronisation automatique via GitHub Actions, backend FastAPI + asyncpg déployé sur HuggingFace Spaces, frontend React/D3 sur GitHub Pages.",
-    link:'https://lucienlaumont.github.io/cetascope/',
+    note:"Backend Supabase (Postgres + Auth + Realtime) avec RLS et RPC SECURITY DEFINER pour toute la logique de jeu, authentification anonyme upgradable vers Discord/Google/Twitch, Edge Function deezer-proxy pour contourner l'absence de CORS de l'API Deezer, back-office 'discaire' pour curer les morceaux jouables par artiste.",
+    link:'https://mymelodle.netlify.app/',
   },
   {
     id:'france-travail',
