@@ -9,11 +9,10 @@ const EXPERIENCES = [
     when:'Mars — Août 2025',
     context:'Stage de fin d\'études (6 mois) · cursus ingénieur',
     bullets:[
-      "Conception et déploiement d'une chaîne RAG complète : génération d'embeddings, API LLM Mistral, base vectorielle Pinecone.",
-      "Développement full-stack d'un back-office sécurisé avec Next.js et FastAPI.",
-      "Intégration OAuth Google",
+      "Conçu en autonomie un système d'IA (RAG) pour un outil interne de questions-réponses sur environ 100 documents : ingestion, recherche sémantique et génération des réponses par LLM.",
+      "Évalué sur un jeu de questions-réponses : documents pertinents retrouvés dans environ 85 % des cas.",
     ],
-    stack:['Python','API Mistral (OCR, LLM, embeddings)','FastAPI', 'PostgreSQL', 'Pinecone','Next.js','Next-Auth','OAuth Google','Render','Regex'],
+    stack:['Python','FastAPI','API Mistral (OCR, LLM, embeddings)','Pinecone'],
   },
   {
     title:'Consultant en processus & transformation digitale',
@@ -23,11 +22,10 @@ const EXPERIENCES = [
     when:'Mai — Août 2024',
     context:'Stage de 4 mois · cursus ingénieur',
     bullets:[
-      "Participation à des projets IA en contexte conseil.",
-      "Développement d'un chatbot GreenIT à destination des équipes internes.",
-      "Conception d'un outil de résumé d'entretiens basé sur Speech-to-Text et LLM.",
+      "Développé et testé le module de recherche documentaire (retrieval) d'un chatbot pour une compagnie d'assurance.",
+      "Contribué à un chatbot conforme aux principes GreenIT et à un outil de résumé automatique d'entretiens (speech-to-text puis LLM).",
     ],
-    stack:['Python', 'API OpenAI - Speech-To-Text', 'Azure AI Studio','Gradio'],
+    stack:['Python','Azure AI Foundry','API OpenAI'],
   },
 ];
 

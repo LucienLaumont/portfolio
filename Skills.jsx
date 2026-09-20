@@ -13,7 +13,7 @@ const HARD_SKILLS = [
 
 const LANGUAGES = [
   { flag:'🇫🇷', lang:'Français', level:'Langue maternelle', dots:5 },
-  { flag:'🇬🇧', lang:'Anglais', level:"B2 - TOEIC 845 · (suivi d'un stage de 5 mois au Canada - Vancouver)", dots:4 },
+  { flag:'🇬🇧', lang:'Anglais', level:"B2 - TOEIC 845 · (suivi d'un stage de 6 mois au Canada - Vancouver)", dots:4 },
 ];
 
 const SOFT = ['Dynamique','Rigueur','Curieux','Sociable','Indépendant'];
