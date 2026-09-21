@@ -2,8 +2,22 @@
 
 const PROJECTS = [
   {
+    id:'deezer-mcp',
+    title:'Deezer MCP - Serveur MCP du catalogue Deezer',
+    logo:'assets/deezer-heart.png',
+    blurb:"**Serveur MCP** (Model Context Protocol) qui expose le **catalogue public Deezer** — recherche de titres, albums et artistes, top titres, charts par genre et **previews audio 30s** — à n'importe quel client compatible MCP comme **Claude**. **9 tools** déployés sur **Render** en transport `streamable-http`, testés en conditions réelles dans claude.ai et Claude Code.",
+    role:'Projet personnel',
+    year:'Septembre 2026',
+    period:'2026',
+    tags:['Python','MCP','FastMCP','httpx','pytest','respx','Render'],
+    kind:'perso',
+    note:"Tool composite get_artist_profile (fiche artiste + top titres + artistes similaires en un seul appel) pour réduire les allers-retours du modèle, et champ instructions transmis au client à la connexion pour que les URLs de preview soient rendues en lien Markdown lisible. Deux pistes explorées puis retirées après mesure — audio embarqué (AudioContent) et pochettes en base64 : le rendu côté client s'est révélé non reproductible, vérifié par comparaison SHA256 plutôt qu'à l'œil. Suite de tests sans aucune requête réseau réelle, DeezerClient mocké via respx au niveau transport httpx.",
+    link:'https://github.com/LucienLaumont/Deezer-MCP',
+  },
+  {
     id:'melodle',
     title:'Melodle - Jeu de reconnaissance musicale',
+    logo:'assets/deezer-heart.png',
     blurb:"Jeu façon **Heardle** où l'on devine un titre à partir d'un **extrait audio Deezer** qui s'allonge à chaque essai manqué. Modes **solo**, **défi quotidien** et **salons multijoueurs** en temps réel entre amis.",
     role:'Projet personnel',
     year:'Juillet 2026',
@@ -16,6 +30,7 @@ const PROJECTS = [
   {
     id:'france-travail',
     title:'France Travail - SDK Python & Dashboard Data/IA',
+    logo:'assets/FranceTravail.png',
     blurb:"Écosystème en deux briques : un **SDK Python** (france-travail-job-offers) qui encapsule l'API France Travail avec **OAuth2** automatique, rate-limiting et référentiel **NAF/ROME** ; et un **dashboard public** qui suit quotidiennement les offres Data/IA en France, avec **classification du niveau d'expérience** (junior / mid / senior) par **Claude Haiku**.",
     role:'Projet personnel',
     year:'Avril 2026',
@@ -28,6 +43,7 @@ const PROJECTS = [
   {
     id:'ymg',
     title:'RAG & Back-office IA',
+    logo:'assets/Mistral.png',
     blurb:"Stage de fin d'études chez **Your Main Guy (Vancouver)**. Conception d'une **chaîne RAG complète** (embeddings, LLM Mistral, vector DB Pinecone) et développement **full-stack** d'un back-office sécurisé avec **OAuth Google**.",
     role:'AI Intern · Stage de 6 mois',
     year:'Mars — Août 2025',
@@ -39,6 +55,7 @@ const PROJECTS = [
   {
     id:'gpt2',
     title:'Fine-tuning GPT-2',
+    logo:'assets/OpenAI.svg',
     blurb:"**Fine-tuning d'un GPT-2** sur un **dataset synthétique** généré par Mistral, avec interface Next.js pour **chatbot interactif**. Capable de proposer des recettes végétarienne ou avec des régimes particulier en se comportant comme un **chef cuisinier**.",
     role:'Travail académique — ESIEE Paris (E5)',
     year:'Janvier — Mars 2025',
@@ -50,6 +67,7 @@ const PROJECTS = [
   {
     id:'mind7',
     title:'Chatbot GreenIT & résumé d\'entretiens',
+    logo:'assets/AzureAIFoundry.png',
     blurb:"Participation à des projets IA chez **Mind7 Consulting** : **chatbot GreenIT** et outil de **résumé d'entretiens** basé sur Speech-to-Text et LLM.",
     role:'Consultant Processus & Transformation Digitale · Stage de 4 mois',
     year:'Mai — Août 2024',
@@ -61,6 +79,7 @@ const PROJECTS = [
   {
     id:'accidents',
     title:'Prédiction de la gravité des accidents de la route',
+    logo:'assets/Kaggle.png',
     blurb:"Développement d'une **pipeline de classification supervisée** avec feature engineering avancé (météo, équipements, âge) pour maximiser l'AUC. Ce projet, réalisé au format **compétition Kaggle**, m'a permis de me classer **1er sur 62 étudiants** de la promotion Data Science & IA 2024.",
     role:'Travail académique — ESIEE Paris (E4)',
     year:'Janvier — Février 2024',
@@ -73,6 +92,7 @@ const PROJECTS = [
   {
     id:'dashboard',
     title:"Dashboard - Site de L'Étudiant",
+    logo:'assets/Docker.png',
     blurb:"**Extraction de données** sur les lycées français via **scraping (Scrapy)**, développement d'un **tableau de bord interactif** conteneurisé avec **Docker**.",
     role:'Travail académique — ESIEE Paris (E4)',
     year:'Décembre 2023 — Janvier 2024',
@@ -145,7 +165,16 @@ const ProjectRow = ({ p, last }) => {
               }}>{p.highlight}</span>
             )}
           </div>
-          <div style={{fontSize:28, lineHeight:1.15, letterSpacing:'-0.5px', marginBottom:8}}>{p.title}</div>
+          <div style={{display:'flex', alignItems:'center', gap:14, marginBottom:8}}>
+            {p.logo && (
+              <img src={p.logo} alt=""
+                style={{
+                  maxHeight:40, maxWidth:96, flexShrink:0,
+                  objectFit:'contain', display:'block',
+                }}/>
+            )}
+            <div style={{fontSize:28, lineHeight:1.15, letterSpacing:'-0.5px'}}>{p.title}</div>
+          </div>
           <div style={{fontSize:15, lineHeight:1.55, color:'var(--fg-2)', maxWidth:640, marginBottom:12}}>{renderEmphasis(p.blurb)}</div>
           <div style={{fontSize:13, opacity:0.6, marginBottom:14, fontStyle:'italic'}}>{p.role}</div>
           <div style={{display:'flex', gap:6, flexWrap:'wrap'}}>
@@ -193,7 +222,7 @@ const Projects = ({ full = false }) => {
         De la donnée brute<br/>au produit livré.
       </h2>
       <p style={{maxWidth:640, opacity:0.75, fontSize:16, lineHeight:1.55, marginBottom:56}}>
-        Sept projets pro, perso et académiques — chacun pensé pour résoudre un problème concret avec les bons outils : scraping, NLP, RAG, classification supervisée, full-stack, SDK et data engineering.
+        Huit projets pro, perso et académiques — chacun pensé pour résoudre un problème concret avec les bons outils : scraping, NLP, RAG, classification supervisée, full-stack, SDK et data engineering.
       </p>
 
       <div style={{
