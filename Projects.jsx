@@ -55,7 +55,7 @@ const PROJECTS = [
   {
     id:'gpt2',
     title:'Fine-tuning GPT-2',
-    logo:'assets/OpenAI.svg',
+    logo:'assets/OpenAI.png',
     blurb:"**Fine-tuning d'un GPT-2** sur un **dataset synthétique** généré par Mistral, avec interface Next.js pour **chatbot interactif**. Capable de proposer des recettes végétarienne ou avec des régimes particulier en se comportant comme un **chef cuisinier**.",
     role:'Travail académique — ESIEE Paris (E5)',
     year:'Janvier — Mars 2025',
