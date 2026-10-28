@@ -2,6 +2,19 @@
 
 const PROJECTS = [
   {
+    id:'wikimap',
+    title:'WikiMap - Carte des enchères WikiMasters',
+    logo:'assets/wikimap.svg',
+    blurb:"**Carte interactive** des cartes du jeu **WikiMasters** que les mêmes collectionneurs achètent ensemble aux enchères : environ **19 500 cartes**, près de **600 groupes nommés** (une série, un sport, un parti…) et les **liens de co-achat** entre eux. Aucun identifiant de joueur publié, seulement des titres de cartes et des compteurs.",
+    role:'Projet personnel',
+    year:'Septembre 2026',
+    period:'2026',
+    tags:['Python','Parquet','Graphes','Louvain','ForceAtlas2','WebGL 2','Cloudflare Workers','D1'],
+    kind:'perso',
+    note:"Filtrage des achats non représentatifs (comptes automatisés, revendeurs, ventes répétées entre deux mêmes comptes), similarité cosinus pondérée entre acheteurs avec seuil de 10 collectionneurs par lien et top-10 voisins par carte, communautés Louvain recalculées puis redécoupées quand elles agrègent des thèmes à peine reliés, noms de groupes relus à la main et rattachés aux cartes pour survivre aux recalculs. Disposition ForceAtlas2 à graine fixe, visionneuse statique sans bibliothèque en WebGL 2 (Canvas 2D en secours), déployée sur Cloudflare avec un compteur de visites D1 sans cookie ni IP.",
+    link:'https://wikimap.dev/',
+  },
+  {
     id:'deezer-mcp',
     title:'Deezer MCP - Serveur MCP du catalogue Deezer',
     logo:'assets/deezer-heart.png',
@@ -12,7 +25,7 @@ const PROJECTS = [
     tags:['Python','MCP','FastMCP','httpx','pytest','respx','Render'],
     kind:'perso',
     note:"Tool composite get_artist_profile (fiche artiste + top titres + artistes similaires en un seul appel) pour réduire les allers-retours du modèle, et champ instructions transmis au client à la connexion pour que les URLs de preview soient rendues en lien Markdown lisible. Deux pistes explorées puis retirées après mesure — audio embarqué (AudioContent) et pochettes en base64 : le rendu côté client s'est révélé non reproductible, vérifié par comparaison SHA256 plutôt qu'à l'œil. Suite de tests sans aucune requête réseau réelle, DeezerClient mocké via respx au niveau transport httpx.",
-    link:'https://github.com/LucienLaumont/Deezer-MCP',
+    link:'https://lucienlaumont.github.io/Deezer-MCP/',
   },
   {
     id:'melodle',
@@ -222,7 +235,7 @@ const Projects = ({ full = false }) => {
         De la donnée brute<br/>au produit livré.
       </h2>
       <p style={{maxWidth:640, opacity:0.75, fontSize:16, lineHeight:1.55, marginBottom:56}}>
-        Huit projets pro, perso et académiques — chacun pensé pour résoudre un problème concret avec les bons outils : scraping, NLP, RAG, classification supervisée, full-stack, SDK et data engineering.
+        Neuf projets pro, perso et académiques — chacun pensé pour résoudre un problème concret avec les bons outils : scraping, NLP, RAG, classification supervisée, analyse de graphes, full-stack, SDK et data engineering.
       </p>
 
       <div style={{
